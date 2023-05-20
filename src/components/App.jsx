@@ -32,7 +32,8 @@ export class App extends Component {
   getPictures = (pictureName) => {
     fetchPictures(pictureName)
     .then(data => {
-      this.setState({ pictures: data.hits})
+      this.setState({ pictures: data.hits })
+      this.setState({page:1})
     })
     .catch(error => console.log(error))
   }
